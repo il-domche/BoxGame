@@ -1,0 +1,1 @@
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGameContent\obj\x86\Debug\ResolveAssemblyReference.cache
