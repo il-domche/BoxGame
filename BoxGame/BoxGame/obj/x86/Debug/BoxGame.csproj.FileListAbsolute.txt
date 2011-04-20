@@ -1,2 +1,7 @@
 C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Debug\BoxGame.exe
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Debug\BoxGame.pdb
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\obj\x86\Debug\BoxGame.exe
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\obj\x86\Debug\BoxGame.pdb
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Debug\Content\res\art\terrain\grass_block.xnb

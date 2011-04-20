@@ -1,6 +1,6 @@
 using System;
 
-namespace BoxGame
+namespace Indiv0.BoxGame
 {
 #if WINDOWS || XBOX
     static class Program

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Content;
 using System;
 
 namespace Indiv0.BoxGame.Classes.Base
@@ -9,12 +10,14 @@ namespace Indiv0.BoxGame.Classes.Base
         #region Class Variables
         private Texture2D _texture;
         private Vector2 _position;
+        private TerrainTypes _terrainType;
         //private SpriteBatch _spriteBatch;
         //private GraphicsDevice _graphicsDevice;
         private string _textureString;
         private int _width;
         private int _height;
         private bool _visible = true;
+
         #endregion
 
         #region Public Variables
@@ -48,6 +51,18 @@ namespace Indiv0.BoxGame.Classes.Base
             get { return _height; }
             set { _height = value; }
         }
+        public enum TerrainTypes
+        {
+            Water,
+            Grass,
+            Mountain,
+            None
+        }
+        public TerrainTypes TerrainType
+        {
+            get { return _terrainType; }
+            set { _terrainType = value; }
+        }
         #endregion
 
         public Sprite(/*GraphicsDevice graphicsDevice, SpriteBatch spriteBatch, */string texString, int x, int y, int texWidth, int texHeight)
@@ -59,6 +74,7 @@ namespace Indiv0.BoxGame.Classes.Base
             _position.Y = y;
             _width = texWidth;
             _height = texHeight;
+            _terrainType = Sprite.TerrainTypes.None;
         }
                 
         //public void DrawSprite()
