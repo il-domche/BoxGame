@@ -1,0 +1,18 @@
+CHANGELOG:
+    Template: VERSION_NUMBER - DESCRIPTION (BUILD SUCCESS/FAIL) [ADDITIONAL NOTES]
+
+    0.0.1 - Initial commit (Success)
+
+    0.0.2 - NOT UPLOADED
+
+    0.0.3 - Very, very sloppy DSA implemented to generate terrain (Success)
+
+    0.0.4 - Changed DSA to improved version, allowing for scalability (Success) [DSA is highly uneven]
+        
+TO-DO:
+    Implement scalable DSA
+    Everything else
+
+    
+BUGS:
+    DSA highly uncalibrated, sloppy.

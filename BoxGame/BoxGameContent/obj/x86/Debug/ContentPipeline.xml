@@ -10,6 +10,24 @@
       <Output>C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Debug\Content\res\art\terrain\grass_block.xnb</Output>
       <Time>2011-04-19T21:38:40.7595076-04:00</Time>
     </Item>
+    <Item>
+      <Source>res\art\terrain\mountain_block.png</Source>
+      <Name>res\art\terrain\mountain_block</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Debug\Content\res\art\terrain\mountain_block.xnb</Output>
+      <Time>2011-04-20T00:34:10.2857672-04:00</Time>
+    </Item>
+    <Item>
+      <Source>res\art\terrain\water_block.png</Source>
+      <Name>res\art\terrain\water_block</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Debug\Content\res\art\terrain\water_block.xnb</Output>
+      <Time>2011-04-20T00:33:30.3754845-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
