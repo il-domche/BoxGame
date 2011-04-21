@@ -55,8 +55,7 @@ namespace Indiv0.BoxGame
 
         private void ToggleFullscreen()
         {
-            if (!graphics.IsFullScreen)
-                graphics.ToggleFullScreen();
+            graphics.ToggleFullScreen();
         }
 
         #region Game Method
@@ -81,9 +80,9 @@ namespace Indiv0.BoxGame
             MountainTexture = Content.Load<Texture2D>("res/art/terrain/mountain_block");
 
             _terrain = new Terrain("res/art/terrain/grass_block", 32, 32,
-                GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
+                GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height, GrassTexture, WaterTexture, MountainTexture);
 
-            _terrain.GenerateTextureMap(GrassTexture, WaterTexture, MountainTexture);
+            _terrain.GenerateNewMap();
         }
         #endregion
 
@@ -111,6 +110,22 @@ namespace Indiv0.BoxGame
                 if (currentKeyboardState.IsKeyDown(Keys.F11))
                 {
                     ToggleFullscreen();
+                }
+
+                if (currentKeyboardState.IsKeyDown(Keys.Enter))
+                {
+                    _terrain.GenerateNewMap();
+                }
+                if (currentKeyboardState.IsKeyDown(Keys.Up))
+                {
+                    _terrain.Roughness++;
+                }
+                if (currentKeyboardState.IsKeyDown(Keys.Down))
+                {
+                    if (_terrain.Roughness > 0)
+                    {
+                        _terrain.Roughness--;
+                    }
                 }
             }
 

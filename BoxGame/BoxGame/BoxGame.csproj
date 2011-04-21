@@ -107,6 +107,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Base\DSAlgorithm.cs" />
     <Compile Include="Classes\Base\Sprite.cs" />
     <Compile Include="Classes\Base\Terrain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
