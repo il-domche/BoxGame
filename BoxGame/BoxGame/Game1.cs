@@ -76,9 +76,9 @@ namespace Indiv0.BoxGame
             currentKeyboardState = Keyboard.GetState();
             previousKeyboardState = currentKeyboardState;
 
+            WaterTexture = Content.Load<Texture2D>("res/art/terrain/water_block");
             GrassTexture = Content.Load<Texture2D>("res/art/terrain/grass_block");
-            WaterTexture = Content.Load<Texture2D>("res/art/terrain/grass_block");
-            MountainTexture = Content.Load<Texture2D>("res/art/terrain/grass_block");
+            MountainTexture = Content.Load<Texture2D>("res/art/terrain/mountain_block");
 
             _terrain = new Terrain("res/art/terrain/grass_block", 32, 32,
                 GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
