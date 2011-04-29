@@ -1,0 +1,17 @@
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Release\Content\res\art\terrain\grass_block.xnb
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Release\Content\res\art\terrain\mountain_block.xnb
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Release\Content\res\art\terrain\water_block.xnb
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Release\Content\res\art\gui\gui_option_1.xnb
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Release\Content\res\art\gui\gui_option_2.xnb
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Release\Content\res\art\gui\selection_box.xnb
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Release\Content\res\fonts\kootenay.xnb
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Release\BoxGame.exe.manifest
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Release\BoxGame.application
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Release\BoxGame.exe
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Release\BoxGame.pdb
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\obj\x86\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\obj\x86\Release\BoxGame.exe.manifest
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\obj\x86\Release\BoxGame.application
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\obj\x86\Release\BoxGame.exe
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\obj\x86\Release\BoxGame.pdb

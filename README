@@ -9,12 +9,18 @@ CHANGELOG:
 
         0.0.4 - Changed DSA to improved version, allowing for scalability (Success) [DSA is highly uneven]
         
-        0.0.5 - Fixed DSA, optimized map generation. (Success) [Huge step forward]
+        0.0.5 - Fixed DSA, optimized map generation (Success) [Huge step forward]
         
-TO-DO:
-    Implement scalable DSA
+        0.0.6 - Some code improvement, addition of minor GUI items/utilities (Success)
+        
+TO-DO (In order of importance):
+    Implement GUI
+    Implement game mechanics
     Make DSA more realistic
-
+    Implement scalable DSA
+    Fix textures
     
 BUGS:
     DSA slightly uncalibrated
+    Textures slightly off-size
+    Laggy selection box movement

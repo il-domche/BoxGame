@@ -16,12 +16,26 @@ namespace Indiv0.BoxGame
     {
         #region Variables
         GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+
+        #region SpriteBatches
+        SpriteBatch tempSpriteBatch;
         SpriteBatch terrainSpriteBatch;
+        SpriteBatch guiSpriteBatch;
+        SpriteBatch utilsSpriteBatch;
+        #endregion
+
+        #region Fonts
+        SpriteFont kootenayFont;
+        #endregion
 
         #region Keyboard
         KeyboardState currentKeyboardState;
         KeyboardState previousKeyboardState;
+        #endregion
+
+        #region Mouse
+        MouseState currentMouseState;
+        MouseState previousMouseState;
         #endregion
 
         #region Screen
@@ -36,16 +50,42 @@ namespace Indiv0.BoxGame
         Terrain _terrain;
         #endregion
 
+        #region Game Values
+        const int POINTS_PER_TURN = 10;
+        int _boxWidth = 32;
+        int _boxHeight = 32;
+        Vector2 _hoveringOver;
+        private Unit[,] _unitMap;
+        #endregion
+
+        #region Utils
+        const long _ticksInASecond = 10000000;
+        int _framesSoFar = 0;
+        int _framesPerSecond;
+        long _elapsedTicks = 0;
+        string FramesPerSecond;
+        Vector2 FramesPosition;
+
+        bool _displayingUtils = false;
+        #endregion
+
+        #region GUI
+        bool _drawBox = false;
+        Vector2 SelectionBoxPosition;
+        #endregion
+
         #region Textures
         Texture2D GrassTexture;
         Texture2D WaterTexture;
         Texture2D MountainTexture;
+        Texture2D SelectionBoxTexture;
         #endregion
 
         #endregion
 
         #region Methods
 
+        #region My Methods
         private void ChangeResolution(int height, int width)
         {
             graphics.PreferredBackBufferHeight = height;
@@ -57,6 +97,25 @@ namespace Indiv0.BoxGame
         {
             graphics.ToggleFullScreen();
         }
+
+        private void ToggleUtilsDisplay()
+        {
+            _displayingUtils = !_displayingUtils;
+        }
+
+        private void GenerateNewUnitMap()
+        {
+            for (int i = 0; i < _terrain.ArrayHeight; i++)
+            {
+                for (int j = 0; j < _terrain.ArrayWidth; j++)
+                {
+                    _unitMap[j, i] = new Unit(_terrain.TextureMap[j, i].TextureString, 
+                        j * _boxWidth, i * _boxHeight, _boxWidth, _boxHeight, 
+                        Unit.Countries.None, Unit.BlockTypes.None);
+                }
+            }
+        }
+        #endregion
 
         #region Game Method
         public Game1()
@@ -70,27 +129,47 @@ namespace Indiv0.BoxGame
         #region Initialize Method
         protected override void Initialize()
         {
+            IsMouseVisible = true;
+
             base.Initialize();
 
             currentKeyboardState = Keyboard.GetState();
             previousKeyboardState = currentKeyboardState;
 
+            currentMouseState = Mouse.GetState();
+            previousMouseState = Mouse.GetState();
+
+            FramesPosition = new Vector2();
+            FramesPosition.X = 20;
+            FramesPosition.Y = 20;
+
             WaterTexture = Content.Load<Texture2D>("res/art/terrain/water_block");
             GrassTexture = Content.Load<Texture2D>("res/art/terrain/grass_block");
             MountainTexture = Content.Load<Texture2D>("res/art/terrain/mountain_block");
+            SelectionBoxTexture = Content.Load<Texture2D>("res/art/gui/selection_box");
+            kootenayFont = Content.Load<SpriteFont>("res/fonts/kootenay");
 
-            _terrain = new Terrain("res/art/terrain/grass_block", 32, 32,
+            _terrain = new Terrain("res/art/terrain/grass_block", _boxWidth, _boxHeight, 
                 GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height, GrassTexture, WaterTexture, MountainTexture);
-
+            
             _terrain.GenerateNewMap();
+
+            _unitMap = new Unit[_terrain.ArrayWidth,_terrain.ArrayHeight];
+
+            GenerateNewUnitMap();
+
+            ChangeResolution(_terrain.ArrayHeight * _boxHeight, _terrain.ArrayWidth * _boxWidth);
+            ToggleFullscreen();
         }
         #endregion
 
         #region Content Methods
         protected override void LoadContent()
         {
-            spriteBatch = new SpriteBatch(GraphicsDevice);
+            tempSpriteBatch = new SpriteBatch(GraphicsDevice);
             terrainSpriteBatch = new SpriteBatch(GraphicsDevice);
+            guiSpriteBatch = new SpriteBatch(GraphicsDevice);
+            utilsSpriteBatch = new SpriteBatch(GraphicsDevice);
         }
 
         protected override void UnloadContent()
@@ -101,8 +180,26 @@ namespace Indiv0.BoxGame
         #region Update Method
         protected override void Update(GameTime gameTime)
         {
+            _drawBox = false;
+
+            #region Frames Per Second
+            _elapsedTicks += gameTime.ElapsedGameTime.Ticks;
+            if (_elapsedTicks < _ticksInASecond)
+            {
+                _framesSoFar++;
+            }
+            else
+            {
+                _elapsedTicks = 0;
+                _framesPerSecond = _framesSoFar;
+                _framesSoFar = 0;
+                FramesPerSecond = Convert.ToString(_framesPerSecond);
+            }
+            #endregion
+
+            #region Keyboard
             currentKeyboardState = Keyboard.GetState();
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed | currentKeyboardState.IsKeyDown(Keys.Escape))
                 this.Exit();
 
             if (currentKeyboardState != previousKeyboardState)
@@ -110,6 +207,11 @@ namespace Indiv0.BoxGame
                 if (currentKeyboardState.IsKeyDown(Keys.F11))
                 {
                     ToggleFullscreen();
+                }
+
+                if (currentKeyboardState.IsKeyDown(Keys.F3))
+                {
+                    ToggleUtilsDisplay();
                 }
 
                 if (currentKeyboardState.IsKeyDown(Keys.Enter))
@@ -128,10 +230,40 @@ namespace Indiv0.BoxGame
                     }
                 }
             }
+            #endregion
+
+            #region Mouse
+            currentMouseState = Mouse.GetState();
+
+            //Check if mouse is colliding with any squares (Which it should be)
+            for (int i = 0; i < _terrain.ArrayHeight; i++)
+            {
+                for (int j = 0; j < _terrain.ArrayWidth; j++)
+                {
+                    if (currentMouseState.X >= _terrain.TextureMap[j, i].Position.X &&
+                        currentMouseState.X <= _terrain.TextureMap[j, i].Position.X + _terrain.TextureMap[j, i].Width)
+                    {
+                        if (currentMouseState.Y >= _terrain.TextureMap[j, i].Position.Y &&
+                        currentMouseState.Y <= _terrain.TextureMap[j, i].Position.Y + _terrain.TextureMap[j, i].Height)
+                        {
+                            //System.Console.WriteLine("Intersecting: [" + j + ", " + i + "]"); 
+                            _drawBox = true;
+                            SelectionBoxPosition.X = _terrain.TextureMap[j, i].Position.X;
+                            SelectionBoxPosition.Y = _terrain.TextureMap[j, i].Position.Y;
+                            _hoveringOver.X = j;
+                            _hoveringOver.Y = i;
+                        }
+                    }
+                }
+            }
+            #endregion
 
             base.Update(gameTime);
 
+            #region Resets
             previousKeyboardState = currentKeyboardState;
+            previousMouseState = currentMouseState;
+            #endregion
         }
         #endregion
 
@@ -143,6 +275,20 @@ namespace Indiv0.BoxGame
             terrainSpriteBatch.Begin();
             _terrain.DrawTerrain(terrainSpriteBatch);
             terrainSpriteBatch.End();
+
+            guiSpriteBatch.Begin();
+            if (_drawBox == true)
+            {
+                guiSpriteBatch.Draw(SelectionBoxTexture, SelectionBoxPosition, Color.White);
+            }
+            guiSpriteBatch.End();
+
+            if (_displayingUtils == true)
+            {
+                utilsSpriteBatch.Begin();
+                utilsSpriteBatch.DrawString(kootenayFont, FramesPerSecond, FramesPosition, Color.White);
+                utilsSpriteBatch.End();
+            }
 
             base.Draw(gameTime);
         }

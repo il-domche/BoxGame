@@ -65,7 +65,7 @@ namespace Indiv0.BoxGame.Classes.Base
         }
         #endregion
 
-        public Sprite(/*GraphicsDevice graphicsDevice, SpriteBatch spriteBatch, */string texString, int x, int y, int texWidth, int texHeight)
+        public Sprite(string texString, int x, int y, int texWidth, int texHeight)
         {
             //_graphicsDevice = graphicsDevice;
             //_spriteBatch = spriteBatch;

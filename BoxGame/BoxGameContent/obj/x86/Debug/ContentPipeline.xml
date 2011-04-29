@@ -28,6 +28,42 @@
       <Output>C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Debug\Content\res\art\terrain\water_block.xnb</Output>
       <Time>2011-04-20T00:33:30.3754845-04:00</Time>
     </Item>
+    <Item>
+      <Source>res\art\gui\gui_option_1.png</Source>
+      <Name>res\art\gui\gui_option_1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Debug\Content\res\art\gui\gui_option_1.xnb</Output>
+      <Time>2011-04-24T00:31:59.9409815-04:00</Time>
+    </Item>
+    <Item>
+      <Source>res\art\gui\gui_option_2.png</Source>
+      <Name>res\art\gui\gui_option_2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Debug\Content\res\art\gui\gui_option_2.xnb</Output>
+      <Time>2011-04-24T00:32:35.5780198-04:00</Time>
+    </Item>
+    <Item>
+      <Source>res\art\gui\selection_box.png</Source>
+      <Name>res\art\gui\selection_box</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Debug\Content\res\art\gui\selection_box.xnb</Output>
+      <Time>2011-04-28T19:25:47.7373588-04:00</Time>
+    </Item>
+    <Item>
+      <Source>res\fonts\kootenay.spritefont</Source>
+      <Name>res\fonts\kootenay</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Debug\Content\res\fonts\kootenay.xnb</Output>
+      <Time>2011-04-28T19:52:05.7476158-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
