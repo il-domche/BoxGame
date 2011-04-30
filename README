@@ -13,6 +13,8 @@ CHANGELOG:
         
         0.0.6 - Some code improvement, addition of minor GUI items/utilities (Success)
         
+        0.0.7 - Several major bugs become prominent, further GUI modifications (Success) [Buggy]
+        
 TO-DO (In order of importance):
     Implement GUI
     Implement game mechanics
@@ -21,6 +23,17 @@ TO-DO (In order of importance):
     Fix textures
     
 BUGS:
-    DSA slightly uncalibrated
-    Textures slightly off-size
-    Laggy selection box movement
+    Template: [CODE - NUM](Importance)Description
+    
+    Codes:
+        [GUI] - Specifically GUI problems (E.g. buttons aren't clickable)
+        [VIS] - Messed up visuals not pertaining to [GRA] (E.g. improper positioning of graphics)
+        [ALG] - Problems with algorithms (Most likely DSA)
+        [MEC] - Problems with game mechanics (E.g. poor AI)
+        [GRA] - Actual texture problems (E.g. uneven pixel count, poor graphics quality)
+    
+        [GUI - 001](Very high)GUI features end up off of screen because of bug
+        [VIS - 001](Very high)Screen resolution uneven
+        [GRA - 001](Normal)Textures slightly off-size
+        [ALG - 001](Low)DSA slightly uncalibrated
+        [GUI - 001](Low)Laggy selection box movement

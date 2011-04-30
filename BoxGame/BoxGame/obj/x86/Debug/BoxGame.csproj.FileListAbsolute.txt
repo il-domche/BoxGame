@@ -13,3 +13,9 @@ C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Debug\Cont
 C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Debug\BoxGame.exe.CodeAnalysisLog.xml
 C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Debug\BoxGame.exe.lastcodeanalysissucceeded
 C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Debug\Content\res\fonts\kootenay.xnb
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Debug\Content\res\art\gui\menus\selection_menu_right.xnb
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Debug\Content\res\art\gui\buttons\button_right.xnb
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Debug\BoxGame.exe.manifest
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Debug\BoxGame.application
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\obj\x86\Debug\BoxGame.exe.manifest
+C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\obj\x86\Debug\BoxGame.application

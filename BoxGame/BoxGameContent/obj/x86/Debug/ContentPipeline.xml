@@ -64,6 +64,24 @@
       <Output>C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Debug\Content\res\fonts\kootenay.xnb</Output>
       <Time>2011-04-28T19:52:05.7476158-04:00</Time>
     </Item>
+    <Item>
+      <Source>res\art\gui\menus\selection_menu_right.png</Source>
+      <Name>res\art\gui\menus\selection_menu_right</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Debug\Content\res\art\gui\menus\selection_menu_right.xnb</Output>
+      <Time>2011-04-29T23:00:41.9931808-04:00</Time>
+    </Item>
+    <Item>
+      <Source>res\art\gui\buttons\button_right.png</Source>
+      <Name>res\art\gui\buttons\button_right</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\bin\x86\Debug\Content\res\art\gui\buttons\button_right.xnb</Output>
+      <Time>2011-04-28T23:25:02.547407-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

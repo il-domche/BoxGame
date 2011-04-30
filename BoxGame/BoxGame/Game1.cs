@@ -9,6 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Indiv0.BoxGame.Classes.Base;
+using Indiv0.BoxGame.Classes.Base.GUI.Input;
 
 namespace Indiv0.BoxGame
 {
@@ -72,6 +73,21 @@ namespace Indiv0.BoxGame
         #region GUI
         bool _drawBox = false;
         Vector2 SelectionBoxPosition;
+
+        Button SelectionButton;
+        string _selectionButtonTextureString = "res/art/gui/buttons/button_right";
+        Vector2 _selectionButtonPosition;
+        int _selectionButtonWidth = 18;
+        int _selectionButtonHeight = 58;
+
+        bool _displayingSelectionMenu = false;
+        Vector2 _selectionMenuPosition;
+        int _selectionMenuWidth = 39;
+        int _selectionMenuHeight = 98;
+
+
+
+        const int GUI_SPACING = 2;
         #endregion
 
         #region Textures
@@ -79,6 +95,7 @@ namespace Indiv0.BoxGame
         Texture2D WaterTexture;
         Texture2D MountainTexture;
         Texture2D SelectionBoxTexture;
+        Texture2D SelectionMenuTexture;
         #endregion
 
         #endregion
@@ -86,6 +103,7 @@ namespace Indiv0.BoxGame
         #region Methods
 
         #region My Methods
+
         private void ChangeResolution(int height, int width)
         {
             graphics.PreferredBackBufferHeight = height;
@@ -146,20 +164,35 @@ namespace Indiv0.BoxGame
             WaterTexture = Content.Load<Texture2D>("res/art/terrain/water_block");
             GrassTexture = Content.Load<Texture2D>("res/art/terrain/grass_block");
             MountainTexture = Content.Load<Texture2D>("res/art/terrain/mountain_block");
-            SelectionBoxTexture = Content.Load<Texture2D>("res/art/gui/selection_box");
             kootenayFont = Content.Load<SpriteFont>("res/fonts/kootenay");
+            
+            SelectionBoxTexture = Content.Load<Texture2D>("res/art/gui/selection_box");
+            SelectionMenuTexture = Content.Load<Texture2D>("res/art/gui/menus/selection_menu_right");
 
             _terrain = new Terrain("res/art/terrain/grass_block", _boxWidth, _boxHeight, 
                 GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height, GrassTexture, WaterTexture, MountainTexture);
             
             _terrain.GenerateNewMap();
 
+            ChangeResolution(_terrain.ArrayHeight * _boxHeight, _terrain.ArrayWidth * _boxWidth);
+            ToggleFullscreen();
+
             _unitMap = new Unit[_terrain.ArrayWidth,_terrain.ArrayHeight];
 
             GenerateNewUnitMap();
 
-            ChangeResolution(_terrain.ArrayHeight * _boxHeight, _terrain.ArrayWidth * _boxWidth);
-            ToggleFullscreen();
+            //Add new stuff here
+            _selectionButtonPosition.X = GraphicsDevice.Viewport.Width;
+            _selectionButtonPosition.Y = (GraphicsDevice.Viewport.Height / 2);
+            SelectionButton = new Button(_selectionButtonTextureString, 
+                (int)_selectionButtonPosition.X, (int)_selectionButtonPosition.Y,
+                _selectionButtonWidth, _selectionButtonHeight);
+            SelectionButton.IsDisplayed = true;
+            SelectionButton.Texture = Content.Load<Texture2D>("res/art/gui/buttons/button_right");
+
+            _selectionMenuPosition.X = (SelectionButton.Position.X - (GUI_SPACING + _selectionMenuWidth));
+            _selectionMenuPosition.Y = ((SelectionButton.Position.Y + SelectionButton.Height) - (_selectionMenuHeight / 2));
+            //But before here
         }
         #endregion
 
@@ -256,6 +289,23 @@ namespace Indiv0.BoxGame
                     }
                 }
             }
+
+            if (currentMouseState != previousMouseState)
+            {
+                if (currentMouseState.X >= SelectionButton.Position.X && currentMouseState.Y >= SelectionButton.Position.Y &&
+                    currentMouseState.X <= (SelectionButton.Position.X + SelectionButton.Width) &&
+                    currentMouseState.Y <= (SelectionButton.Position.Y + SelectionButton.Height))
+                {
+                    if (currentMouseState.LeftButton == ButtonState.Pressed)
+                    {
+                        if (_displayingSelectionMenu == false)
+                        {
+                            _displayingSelectionMenu = true;
+                        }
+                        else { _displayingSelectionMenu = false; }
+                    }
+                }
+            }
             #endregion
 
             base.Update(gameTime);
@@ -280,6 +330,14 @@ namespace Indiv0.BoxGame
             if (_drawBox == true)
             {
                 guiSpriteBatch.Draw(SelectionBoxTexture, SelectionBoxPosition, Color.White);
+            }
+            if (SelectionButton.IsDisplayed == true)
+            {
+                guiSpriteBatch.Draw(SelectionButton.Texture, SelectionButton.Position, Color.White);
+            }
+            if (_displayingSelectionMenu == true)
+            {
+                guiSpriteBatch.Draw(SelectionMenuTexture, _selectionMenuPosition, Color.White);
             }
             guiSpriteBatch.End();
 
