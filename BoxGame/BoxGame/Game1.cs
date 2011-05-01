@@ -10,6 +10,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Indiv0.BoxGame.Classes.Base;
 using Indiv0.BoxGame.Classes.Base.GUI.Input;
+using Indiv0.BoxGame.Classes.Base.GUI.StateManagement;
 
 namespace Indiv0.BoxGame
 {
@@ -71,6 +72,8 @@ namespace Indiv0.BoxGame
         #endregion
 
         #region GUI
+        StateManager _stateManager;
+
         bool _drawBox = false;
         Vector2 SelectionBoxPosition;
 
@@ -84,8 +87,6 @@ namespace Indiv0.BoxGame
         Vector2 _selectionMenuPosition;
         int _selectionMenuWidth = 39;
         int _selectionMenuHeight = 98;
-
-
 
         const int GUI_SPACING = 2;
         #endregion
@@ -147,9 +148,11 @@ namespace Indiv0.BoxGame
         #region Initialize Method
         protected override void Initialize()
         {
-            IsMouseVisible = true;
-
             base.Initialize();
+
+            _stateManager = new StateManager(this.Content);
+
+            IsMouseVisible = true;
 
             currentKeyboardState = Keyboard.GetState();
             previousKeyboardState = currentKeyboardState;
@@ -182,7 +185,7 @@ namespace Indiv0.BoxGame
             GenerateNewUnitMap();
 
             //Add new stuff here
-            _selectionButtonPosition.X = GraphicsDevice.Viewport.Width;
+            _selectionButtonPosition.X = (GraphicsDevice.Viewport.Width - _selectionButtonWidth);
             _selectionButtonPosition.Y = (GraphicsDevice.Viewport.Height / 2);
             SelectionButton = new Button(_selectionButtonTextureString, 
                 (int)_selectionButtonPosition.X, (int)_selectionButtonPosition.Y,
@@ -191,7 +194,7 @@ namespace Indiv0.BoxGame
             SelectionButton.Texture = Content.Load<Texture2D>("res/art/gui/buttons/button_right");
 
             _selectionMenuPosition.X = (SelectionButton.Position.X - (GUI_SPACING + _selectionMenuWidth));
-            _selectionMenuPosition.Y = ((SelectionButton.Position.Y + SelectionButton.Height) - (_selectionMenuHeight / 2));
+            _selectionMenuPosition.Y = ((SelectionButton.Position.Y + (SelectionButton.Height / 2)) - (_selectionMenuHeight / 2));
             //But before here
         }
         #endregion

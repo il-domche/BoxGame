@@ -19,7 +19,7 @@
     <ApplicationIcon>Game.ico</ApplicationIcon>
     <Thumbnail>GameThumbnail.png</Thumbnail>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>publish\0.0.7\</PublishUrl>
+    <PublishUrl>publish\0.0.8\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -29,8 +29,11 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
-    <ApplicationVersion>0.0.7.%2a</ApplicationVersion>
+    <TargetCulture>en</TargetCulture>
+    <ProductName>BoxGame</ProductName>
+    <PublisherName>Indiv0Soft</PublisherName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>0.0.8.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -47,7 +50,7 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <PlatformTarget>x86</PlatformTarget>
     <XnaCompressContent>false</XnaCompressContent>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>MyRuleSet.ruleset</CodeAnalysisRuleSet>
     <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
@@ -129,7 +132,12 @@
     <Compile Include="Classes\Base\DSAlgorithm.cs" />
     <Compile Include="Classes\Base\GUI\Input\Button.cs" />
     <Compile Include="Classes\Base\GUI\Input\SelectionBox.cs" />
-    <Compile Include="Classes\Base\GUI\Menu.cs" />
+    <Compile Include="Classes\Base\GUI\States\LoadScreen.cs" />
+    <Compile Include="Classes\Base\GUI\States\MainMenu.cs" />
+    <Compile Include="Snippets.cs" />
+    <Compile Include="Classes\Base\GUI\StateManagement\State.cs" />
+    <Compile Include="Classes\Base\GUI\States\GamePlay.cs" />
+    <Compile Include="Classes\Base\GUI\StateManagement\StateManager.cs" />
     <Compile Include="Classes\Base\Sprite.cs" />
     <Compile Include="Classes\Base\Terrain.cs" />
     <Compile Include="Classes\Base\Unit.cs" />
@@ -177,6 +185,7 @@
   <ItemGroup>
     <None Include="BoxGame_TemporaryKey.pfx" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
   <!--
