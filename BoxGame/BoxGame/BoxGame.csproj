@@ -19,7 +19,7 @@
     <ApplicationIcon>Game.ico</ApplicationIcon>
     <Thumbnail>GameThumbnail.png</Thumbnail>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>publish\0.0.8\</PublishUrl>
+    <PublishUrl>publish\0.1.0\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -33,7 +33,7 @@
     <ProductName>BoxGame</ProductName>
     <PublisherName>Indiv0Soft</PublisherName>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>0.0.8.0</ApplicationVersion>
+    <ApplicationVersion>0.1.0.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -132,7 +132,6 @@
     <Compile Include="Classes\Base\DSAlgorithm.cs" />
     <Compile Include="Classes\Base\GUI\Input\Button.cs" />
     <Compile Include="Classes\Base\GUI\Input\SelectionBox.cs" />
-    <Compile Include="Classes\Base\GUI\States\LoadScreen.cs" />
     <Compile Include="Classes\Base\GUI\States\MainMenu.cs" />
     <Compile Include="Snippets.cs" />
     <Compile Include="Classes\Base\GUI\StateManagement\State.cs" />

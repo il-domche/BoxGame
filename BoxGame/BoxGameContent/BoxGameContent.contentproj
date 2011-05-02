@@ -86,7 +86,18 @@
       <Processor>FontDescriptionProcessor</Processor>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="res\art\gui\buttons\button_right_clicked.png">
+      <Name>button_right_clicked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="res\art\gui\buttons\button_right_hover.png">
+      <Name>button_right_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="res\art\gui\menus\selection_menu_right.png">
       <Name>selection_menu_right</Name>

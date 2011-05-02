@@ -4,6 +4,8 @@ Content\res\art\terrain\water_block.xnb
 Content\res\art\gui\gui_option_1.xnb
 Content\res\art\gui\gui_option_2.xnb
 Content\res\art\gui\selection_box.xnb
-Content\res\fonts\kootenay.xnb
+Content\res\art\gui\buttons\button_right_clicked.xnb
+Content\res\art\gui\buttons\button_right_hover.xnb
 Content\res\art\gui\menus\selection_menu_right.xnb
 Content\res\art\gui\buttons\button_right.xnb
+Content\res\fonts\kootenay.xnb

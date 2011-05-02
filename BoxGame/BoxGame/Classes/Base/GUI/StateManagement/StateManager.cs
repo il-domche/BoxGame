@@ -4,18 +4,20 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework.Content;
 using Indiv0.BoxGame.Classes.Base.GUI.States;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework;
 
 namespace Indiv0.BoxGame.Classes.Base.GUI.StateManagement
 {    
-    class StateManager   
-    {       
+    class StateManager
+    {
+        #region Fields
         private int _currentState;
   
         List<State> StateList;   
     
         public enum StateOptions
-        {         
-            LoadScreen,   
+        { 
             MainMenu,      
             GamePlay,
         }      
@@ -39,11 +41,7 @@ namespace Indiv0.BoxGame.Classes.Base.GUI.StateManagement
                 this._currentState = value;         
             }       
         }      
-
-        public void PushState(int stateOptions)   
-        {        
-            _currentState = stateOptions;     
-        }   
+        #endregion
 
         public StateManager(ContentManager contentManager)   
         {          
@@ -51,16 +49,30 @@ namespace Indiv0.BoxGame.Classes.Base.GUI.StateManagement
             StateList = new List<State>();     
             InitializeStates(contentManager);    
         }       
+
         // Creates the states and stores them apppropriately  
         private void InitializeStates(ContentManager contentManager)    
         {         
-            LoadScreen loadScreen = new LoadScreen(contentManager);
             MainMenu mainMenu = new MainMenu(contentManager);
-            GamePlay gamePlay = new GamePlay(contentManager);
-            StateList.Add(loadScreen);            
+            GamePlay gamePlay = new GamePlay(contentManager); 
             StateList.Add(mainMenu);          
             StateList.Add(gamePlay);        
             _currentState = 0;      
+        }
+
+        public void Update(GameTime gameTime)
+        {
+            StateList[_currentState].Update(gameTime);
+        }
+
+        public void Draw(GameTime gameTime, GraphicsDevice graphicsDevice, SpriteBatch spriteBatch)
+        {
+            StateList[_currentState].Draw(gameTime, graphicsDevice, spriteBatch);
+        }
+
+        public void PushState(int stateOptions)
+        {
+            _currentState = stateOptions;
         }   
     }
 }

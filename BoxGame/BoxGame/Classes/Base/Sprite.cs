@@ -76,7 +76,7 @@ namespace Indiv0.BoxGame.Classes.Base
             _height = texHeight;
             _terrainType = Sprite.TerrainTypes.None;
         }
-                
+                        
         //public void DrawSprite()
         //{
         //    if (_visible == true)

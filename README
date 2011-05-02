@@ -17,6 +17,8 @@ CHANGELOG:
         
         0.0.8 - Began implementation of screens. (Success) [Still buggy]
         
+        0.0.9 - Major GUI improvements, first successful screens, various fixes (Success)
+        
 TO-DO (In order of importance):
     Implement GUI
     Implement game mechanics
@@ -36,6 +38,7 @@ BUGS:
     
         [GUI - 001](Very high)GUI features end up off of screen because of bug
         [VIS - 001](Very high)Screen resolution uneven
+        [VIS - 002](Very high)Improper screen positioning/Cutoff
         [GRA - 001](Normal)Textures slightly off-size
         [ALG - 001](Low)DSA slightly uncalibrated
         [GUI - 001](Low)Laggy selection box movement
