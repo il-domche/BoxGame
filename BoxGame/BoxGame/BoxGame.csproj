@@ -19,7 +19,7 @@
     <ApplicationIcon>Game.ico</ApplicationIcon>
     <Thumbnail>GameThumbnail.png</Thumbnail>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>publish\0.1.0\</PublishUrl>
+    <PublishUrl>publish\0.0.9_01\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -32,8 +32,8 @@
     <TargetCulture>en</TargetCulture>
     <ProductName>BoxGame</ProductName>
     <PublisherName>Indiv0Soft</PublisherName>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>0.1.0.0</ApplicationVersion>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>0.0.9.01</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>

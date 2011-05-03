@@ -28,6 +28,10 @@ namespace Indiv0.BoxGame.Classes.Base.GUI.States
 
         Terrain _terrain;
 
+        SpriteFont kootenayFont;
+        Vector2 RoughnessPosition;
+        bool _displayingUtils = false;
+
         KeyboardState currentKeyboardState;
         KeyboardState previousKeyboardState;
         
@@ -65,9 +69,14 @@ namespace Indiv0.BoxGame.Classes.Base.GUI.States
             currentMouseState = Mouse.GetState();
             previousMouseState = Mouse.GetState();
 
+            RoughnessPosition = new Vector2();
+            RoughnessPosition.X = 100;
+            RoughnessPosition.Y = 20;
+
             WaterTexture = contentManager.Load<Texture2D>("res/art/terrain/water_block");
             GrassTexture = contentManager.Load<Texture2D>("res/art/terrain/grass_block");
             MountainTexture = contentManager.Load<Texture2D>("res/art/terrain/mountain_block");
+            kootenayFont = contentManager.Load<SpriteFont>("res/fonts/kootenay");
 
             _terrain = new Terrain("res/art/terrain/grass_block", _boxWidth, _boxHeight,
                 Game1._DEFAULT_SCREEN_WIDTH, Game1._DEFAULT_SCREEN_HEIGHT, GrassTexture, WaterTexture, MountainTexture);
@@ -109,6 +118,10 @@ namespace Indiv0.BoxGame.Classes.Base.GUI.States
 
             if (currentKeyboardState != previousKeyboardState)
             {
+                if (currentKeyboardState.IsKeyDown(Keys.F3))
+                {
+                    ToggleUtilsDisplay();
+                }
                 if (currentKeyboardState.IsKeyDown(Keys.Enter))
                 {
                     _terrain.GenerateNewMap();
@@ -201,6 +214,12 @@ namespace Indiv0.BoxGame.Classes.Base.GUI.States
             {
                 spriteBatch.Draw(SelectionMenuTexture, _selectionMenuPosition, Color.White);
             }
+
+            if (_displayingUtils == true)
+            {
+                spriteBatch.DrawString(kootenayFont, "Roughness: " + _terrain.Roughness, RoughnessPosition, Color.White);
+            }
+
             spriteBatch.End();
         }
         #endregion
@@ -217,6 +236,11 @@ namespace Indiv0.BoxGame.Classes.Base.GUI.States
                         Unit.Countries.None, Unit.BlockTypes.None);
                 }
             }
+        }
+
+        private void ToggleUtilsDisplay()
+        {
+            _displayingUtils = !_displayingUtils;
         }
         #endregion
     }

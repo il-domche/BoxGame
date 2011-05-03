@@ -94,7 +94,6 @@ namespace Indiv0.BoxGame.Classes.Base.GUI.States
         {
             graphicsDevice.Clear(Color.CornflowerBlue);
 
-
             spriteBatch.Begin();
             spriteBatch.End();
         }

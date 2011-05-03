@@ -170,7 +170,7 @@ namespace Indiv0.BoxGame
             if (_displayingUtils == true)
             {
                 _utilsSpriteBatch.Begin();
-                _utilsSpriteBatch.DrawString(kootenayFont, FramesPerSecond, FramesPosition, Color.White);
+                _utilsSpriteBatch.DrawString(kootenayFont, "FPS: " + FramesPerSecond, FramesPosition, Color.White);
                 _utilsSpriteBatch.End();
             }
 
