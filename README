@@ -19,6 +19,7 @@ CHANGELOG:
         
         0.0.9 - Major GUI improvements, first successful screens, various fixes (Success)
             0.0.9_01 - Tiny modification to display terrain roughness in utils mode (Success)
+            0.0.9_02 - Fixed FPS counter to accurately display framerate (Success)
         
 TO-DO (In order of importance):
     Implement GUI

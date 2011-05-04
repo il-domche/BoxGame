@@ -17,7 +17,6 @@ namespace Indiv0.BoxGame.Classes.Base
         private int _width;
         private int _height;
         private bool _visible = true;
-
         #endregion
 
         #region Public Variables

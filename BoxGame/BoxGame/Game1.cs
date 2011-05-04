@@ -34,6 +34,7 @@ namespace Indiv0.BoxGame
         int _framesSoFar = 0;
         int _framesPerSecond;
         long _elapsedTicks = 0;
+        long _lastFrameTick = 0;
         string FramesPerSecond;
         Vector2 FramesPosition;
 
@@ -68,6 +69,41 @@ namespace Indiv0.BoxGame
             graphics.PreferredBackBufferWidth = width;
             graphics.ApplyChanges();
         }
+
+        private void CalculateFPS(GameTime gameTime, int method)
+        {
+            if (method == 0)
+            {
+                _elapsedTicks += gameTime.TotalGameTime.Ticks - _lastFrameTick;
+                _lastFrameTick = gameTime.TotalGameTime.Ticks;
+                if (_elapsedTicks < _ticksInASecond)
+                {
+                    _framesSoFar++;
+                }
+                else
+                {
+                    _elapsedTicks = 0;
+                    _framesPerSecond = _framesSoFar;
+                    _framesSoFar = 0;
+                    FramesPerSecond = Convert.ToString(_framesPerSecond);
+                }
+            }
+            else
+            {
+                _elapsedTicks += gameTime.ElapsedGameTime.Ticks;
+                if (_elapsedTicks < _ticksInASecond)
+                {
+                    _framesSoFar++;
+                }
+                else
+                {
+                    _elapsedTicks = 0;
+                    _framesPerSecond = _framesSoFar;
+                    _framesSoFar = 0;
+                    FramesPerSecond = Convert.ToString(_framesPerSecond);
+                }
+            }
+        }
         #endregion
 
         #region Game Method
@@ -75,7 +111,7 @@ namespace Indiv0.BoxGame
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            ChangeResolution(_DEFAULT_SCREEN_HEIGHT, _DEFAULT_SCREEN_WIDTH);
+            ChangeResolution(_DEFAULT_SCREEN_WIDTH, _DEFAULT_SCREEN_HEIGHT);
         }
         #endregion
 
@@ -93,7 +129,6 @@ namespace Indiv0.BoxGame
             FramesPosition.Y = 20;
             kootenayFont = Content.Load<SpriteFont>("res/fonts/kootenay");
             
-            ChangeResolution(_DEFAULT_SCREEN_WIDTH, _DEFAULT_SCREEN_HEIGHT);
             ToggleFullscreen();
         }
         #endregion
@@ -113,21 +148,6 @@ namespace Indiv0.BoxGame
         #region Update Method
         protected override void Update(GameTime gameTime)
         {
-            #region Frames Per Second
-            _elapsedTicks += gameTime.ElapsedGameTime.Ticks;
-            if (_elapsedTicks < _ticksInASecond)
-            {
-                _framesSoFar++;
-            }
-            else
-            {
-                _elapsedTicks = 0;
-                _framesPerSecond = _framesSoFar;
-                _framesSoFar = 0;
-                FramesPerSecond = Convert.ToString(_framesPerSecond);
-            }
-            #endregion
-
             #region Keyboard
             currentKeyboardState = Keyboard.GetState();
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed | currentKeyboardState.IsKeyDown(Keys.Escape))
@@ -164,6 +184,8 @@ namespace Indiv0.BoxGame
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+
+            CalculateFPS(gameTime, 0);
 
             _stateManager.Draw(gameTime, GraphicsDevice, _spriteBatch);
 

@@ -6,7 +6,7 @@
    <Modules>
     <Module Name="boxgame.exe">
      <Messages>
-      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
        <Issue Certainty="95" Level="Error">Mark 'BoxGame.exe' with CLSCompliant(true) because it exposes externally visible types.</Issue>
       </Message>
      </Messages>
@@ -15,45 +15,45 @@
        <Types>
         <Type Name="DSAlgorithm" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
          <Messages>
-          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
            <Issue Certainty="75" Level="Warning">'DSAlgorithm' is an internal class that is apparently never instantiated. If so, remove the code from the assembly. If this class is intended to contain only static methods, consider adding a private constructor to prevent the compiler from generating a default constructor.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#CalculateAndInsertAverage(System.Single,System.Single,System.Single,System.Single,System.Int32,System.Single[,],System.Int32,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="5#" TypeName="PreferJaggedArraysOverMultidimensional" Category="Microsoft.Performance" CheckId="CA1814" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="Breaking">
+            <Message Id="5#" TypeName="PreferJaggedArraysOverMultidimensional" Category="Microsoft.Performance" CheckId="CA1814" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="Breaking">
              <Issue Certainty="25" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="DSAlgorithm.cs" Line="142">'map' is a multidimensional array. Replace it with a jagged array if possible.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#DiamondStep(System.Single[,],System.Int32,System.Int32,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="0#" TypeName="PreferJaggedArraysOverMultidimensional" Category="Microsoft.Performance" CheckId="CA1814" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="Breaking">
+            <Message Id="0#" TypeName="PreferJaggedArraysOverMultidimensional" Category="Microsoft.Performance" CheckId="CA1814" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="Breaking">
              <Issue Certainty="25" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="DSAlgorithm.cs" Line="42">'map' is a multidimensional array. Replace it with a jagged array if possible.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GenerateHeightMap(System.Int32,System.Single,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message Id="Body" TypeName="PreferJaggedArraysOverMultidimensional" Category="Microsoft.Performance" CheckId="CA1814" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="Breaking">
+            <Message Id="Body" TypeName="PreferJaggedArraysOverMultidimensional" Category="Microsoft.Performance" CheckId="CA1814" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="Breaking">
              <Issue Name="Body" Certainty="25" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="DSAlgorithm.cs" Line="18">'DSAlgorithm.GenerateHeightMap(int, float, int, int)' uses a multidimensional array of 'float[,]'. Replace it with a jagged array if possible.</Issue>
             </Message>
-            <Message Id="Return" TypeName="PreferJaggedArraysOverMultidimensional" Category="Microsoft.Performance" CheckId="CA1814" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="Breaking">
+            <Message Id="Return" TypeName="PreferJaggedArraysOverMultidimensional" Category="Microsoft.Performance" CheckId="CA1814" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="Breaking">
              <Issue Name="Return" Certainty="25" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="DSAlgorithm.cs" Line="13">'DSAlgorithm.GenerateHeightMap(int, float, int, int)' returns a multidimensional array of 'float[,]'. Replace it with a jagged array if possible.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#SquareStepEven(System.Single[,],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="0#" TypeName="PreferJaggedArraysOverMultidimensional" Category="Microsoft.Performance" CheckId="CA1814" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="Breaking">
+            <Message Id="0#" TypeName="PreferJaggedArraysOverMultidimensional" Category="Microsoft.Performance" CheckId="CA1814" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="Breaking">
              <Issue Certainty="25" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="DSAlgorithm.cs" Line="65">'map' is a multidimensional array. Replace it with a jagged array if possible.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#SquareStepOdd(System.Single[,],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="0#" TypeName="PreferJaggedArraysOverMultidimensional" Category="Microsoft.Performance" CheckId="CA1814" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="Breaking">
+            <Message Id="0#" TypeName="PreferJaggedArraysOverMultidimensional" Category="Microsoft.Performance" CheckId="CA1814" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="Breaking">
              <Issue Certainty="25" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="DSAlgorithm.cs" Line="103">'map' is a multidimensional array. Replace it with a jagged array if possible.</Issue>
             </Message>
            </Messages>
@@ -68,28 +68,28 @@
          <Members>
           <Member Name="#_screenHeight" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">It appears that field 'Game1._screenHeight' is never used or is only ever assigned to. Use this field or remove it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#_screenWidth" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">It appears that field 'Game1._screenWidth' is never used or is only ever assigned to. Use this field or remove it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Draw(Microsoft.Xna.Framework.GameTime)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message Id="Microsoft.Xna.Framework.Graphics.SpriteBatch.DrawString(Microsoft.Xna.Framework.Graphics.SpriteFont,System.String,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="DependsOnFix">
-             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame" File="Game1.cs" Line="173">Method 'Game1.Draw(GameTime)' passes a literal string as parameter 'text' of a call to 'SpriteBatch.DrawString(SpriteFont, string, Vector2, Color)'. Retrieve the following string(s) from a resource table instead: "FPS: ".</Issue>
+            <Message Id="Microsoft.Xna.Framework.Graphics.SpriteBatch.DrawString(Microsoft.Xna.Framework.Graphics.SpriteFont,System.String,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame" File="Game1.cs" Line="195">Method 'Game1.Draw(GameTime)' passes a literal string as parameter 'text' of a call to 'SpriteBatch.DrawString(SpriteFont, string, Vector2, Color)'. Retrieve the following string(s) from a resource table instead: "FPS: ".</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#previousMouseState" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">It appears that field 'Game1.previousMouseState' is never used or is only ever assigned to. Use this field or remove it.</Issue>
             </Message>
            </Messages>
@@ -100,7 +100,7 @@
          <Members>
           <Member Name="#Main(System.String[])" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="args" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+            <Message Id="args" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame" File="Program.cs" Line="12">Parameter 'args' of 'Program.Main(string[])' is never used. Remove the parameter or use it in the method body.</Issue>
             </Message>
            </Messages>
@@ -117,8 +117,8 @@
            <Accessors>
             <Accessor Name="#set_Height(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
-               <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Sprite.cs" Line="52">'Sprite.Height.set(int)' appears to have no upstream public or protected callers.</Issue>
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
+               <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Sprite.cs" Line="51">'Sprite.Height.set(int)' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
             </Accessor>
@@ -128,8 +128,8 @@
            <Accessors>
             <Accessor Name="#set_Position(Microsoft.Xna.Framework.Vector2)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
-               <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Sprite.cs" Line="32">'Sprite.Position.set(Vector2)' appears to have no upstream public or protected callers.</Issue>
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
+               <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Sprite.cs" Line="31">'Sprite.Position.set(Vector2)' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
             </Accessor>
@@ -139,8 +139,8 @@
            <Accessors>
             <Accessor Name="#get_TerrainType()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
-               <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Sprite.cs" Line="63">'Sprite.TerrainType.get()' appears to have no upstream public or protected callers.</Issue>
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
+               <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Sprite.cs" Line="62">'Sprite.TerrainType.get()' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
             </Accessor>
@@ -150,8 +150,8 @@
            <Accessors>
             <Accessor Name="#set_TextureString(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
-               <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Sprite.cs" Line="37">'Sprite.TextureString.set(string)' appears to have no upstream public or protected callers.</Issue>
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
+               <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Sprite.cs" Line="36">'Sprite.TextureString.set(string)' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
             </Accessor>
@@ -161,15 +161,15 @@
            <Accessors>
             <Accessor Name="#get_Visible()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
-               <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Sprite.cs" Line="41">'Sprite.Visible.get()' appears to have no upstream public or protected callers.</Issue>
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
+               <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Sprite.cs" Line="40">'Sprite.Visible.get()' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
             </Accessor>
             <Accessor Name="#set_Visible(System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
-               <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Sprite.cs" Line="42">'Sprite.Visible.set(bool)' appears to have no upstream public or protected callers.</Issue>
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
+               <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Sprite.cs" Line="41">'Sprite.Visible.set(bool)' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
             </Accessor>
@@ -179,8 +179,8 @@
            <Accessors>
             <Accessor Name="#set_Width(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
-               <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Sprite.cs" Line="47">'Sprite.Width.set(int)' appears to have no upstream public or protected callers.</Issue>
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
+               <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Sprite.cs" Line="46">'Sprite.Width.set(int)' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
             </Accessor>
@@ -192,41 +192,41 @@
          <Members>
           <Member Name="#.ctor(System.String,System.Int32,System.Int32,System.Int32,System.Int32,Microsoft.Xna.Framework.Graphics.Texture2D,Microsoft.Xna.Framework.Graphics.Texture2D,Microsoft.Xna.Framework.Graphics.Texture2D)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message Id="screenHeight" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+            <Message Id="screenHeight" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Terrain.cs" Line="26">Parameter 'screenHeight' of 'Terrain.Terrain(string, int, int, int, int, Texture2D, Texture2D, Texture2D)' is never used. Remove the parameter or use it in the method body.</Issue>
             </Message>
-            <Message Id="screenWidth" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+            <Message Id="screenWidth" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Terrain.cs" Line="26">Parameter 'screenWidth' of 'Terrain.Terrain(string, int, int, int, int, Texture2D, Texture2D, Texture2D)' is never used. Remove the parameter or use it in the method body.</Issue>
             </Message>
-            <Message Id="texString" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+            <Message Id="texString" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Terrain.cs" Line="26">Parameter 'texString' of 'Terrain.Terrain(string, int, int, int, int, Texture2D, Texture2D, Texture2D)' is never used. Remove the parameter or use it in the method body.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#_blocksHigh" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">It appears that field 'Terrain._blocksHigh' is never used or is only ever assigned to. Use this field or remove it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#_blocksWide" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">It appears that field 'Terrain._blocksWide' is never used or is only ever assigned to. Use this field or remove it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#_heightMap" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="Member" TypeName="PreferJaggedArraysOverMultidimensional" Category="Microsoft.Performance" CheckId="CA1814" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="Breaking">
+            <Message Id="Member" TypeName="PreferJaggedArraysOverMultidimensional" Category="Microsoft.Performance" CheckId="CA1814" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="Breaking">
              <Issue Certainty="25" Level="Warning">'Terrain._heightMap' is a multidimensional array. Replace it with a jagged array if possible.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#_textureMap" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="Member" TypeName="PreferJaggedArraysOverMultidimensional" Category="Microsoft.Performance" CheckId="CA1814" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="Breaking">
+            <Message Id="Member" TypeName="PreferJaggedArraysOverMultidimensional" Category="Microsoft.Performance" CheckId="CA1814" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="Breaking">
              <Issue Certainty="25" Level="Warning">'Terrain._textureMap' is a multidimensional array. Replace it with a jagged array if possible.</Issue>
             </Message>
            </Messages>
@@ -235,7 +235,7 @@
            <Accessors>
             <Accessor Name="#set_ArrayHeight(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
                <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Terrain.cs" Line="53">'Terrain.ArrayHeight.set(int)' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
@@ -246,7 +246,7 @@
            <Accessors>
             <Accessor Name="#set_ArrayWidth(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
                <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Terrain.cs" Line="48">'Terrain.ArrayWidth.set(int)' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
@@ -255,7 +255,7 @@
           </Member>
           <Member Name="#GenerateNewMap()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message Id="Body" TypeName="PreferJaggedArraysOverMultidimensional" Category="Microsoft.Performance" CheckId="CA1814" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="Breaking">
+            <Message Id="Body" TypeName="PreferJaggedArraysOverMultidimensional" Category="Microsoft.Performance" CheckId="CA1814" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="Breaking">
              <Issue Name="Body" Certainty="25" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Terrain.cs" Line="102">'Terrain.GenerateNewMap()' uses a multidimensional array of 'Sprite[,]'. Replace it with a jagged array if possible.</Issue>
             </Message>
            </Messages>
@@ -264,14 +264,14 @@
            <Accessors>
             <Accessor Name="#get_Iterations()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
                <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Terrain.cs" Line="57">'Terrain.Iterations.get()' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
             </Accessor>
             <Accessor Name="#set_Iterations(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
                <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Terrain.cs" Line="58">'Terrain.Iterations.set(int)' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
@@ -282,14 +282,14 @@
            <Accessors>
             <Accessor Name="#get_Seed()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
                <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Terrain.cs" Line="62">'Terrain.Seed.get()' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
             </Accessor>
             <Accessor Name="#set_Seed(System.Single)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
                <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Terrain.cs" Line="63">'Terrain.Seed.set(float)' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
@@ -298,14 +298,14 @@
           </Member>
           <Member Name="#TextureMap" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message Id="Member" TypeName="PreferJaggedArraysOverMultidimensional" Category="Microsoft.Performance" CheckId="CA1814" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="Breaking">
+            <Message Id="Member" TypeName="PreferJaggedArraysOverMultidimensional" Category="Microsoft.Performance" CheckId="CA1814" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="Breaking">
              <Issue Certainty="25" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Terrain.cs" Line="42">'Terrain.TextureMap' is a multidimensional array. Replace it with a jagged array if possible.</Issue>
             </Message>
            </Messages>
            <Accessors>
             <Accessor Name="#set_TextureMap(Indiv0.BoxGame.Classes.Base.Sprite[,])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
                <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Terrain.cs" Line="43">'Terrain.TextureMap.set(Sprite[,])' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
@@ -316,14 +316,14 @@
            <Accessors>
             <Accessor Name="#get_Variation()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
                <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Terrain.cs" Line="67">'Terrain.Variation.get()' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
             </Accessor>
             <Accessor Name="#set_Variation(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
                <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base" File="Terrain.cs" Line="68">'Terrain.Variation.set(int)' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
@@ -336,14 +336,14 @@
          <Members>
           <Member Name="#_blockType" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">It appears that field 'Unit._blockType' is never used or is only ever assigned to. Use this field or remove it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#_country" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">It appears that field 'Unit._country' is never used or is only ever assigned to. Use this field or remove it.</Issue>
             </Message>
            </Messages>
@@ -360,7 +360,7 @@
            <Accessors>
             <Accessor Name="#set_ButtonRectangle(Microsoft.Xna.Framework.Rectangle)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
                <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base\GUI\Input" File="Button.cs" Line="38">'Button.ButtonRectangle.set(Rectangle)' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
@@ -371,7 +371,7 @@
            <Accessors>
             <Accessor Name="#get_IsDisplayed()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
                <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base\GUI\Input" File="Button.cs" Line="31">'Button.IsDisplayed.get()' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
@@ -380,7 +380,7 @@
           </Member>
           <Member Name="#Update(Microsoft.Xna.Framework.GameTime)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message Id="gameTime" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+            <Message Id="gameTime" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base\GUI\Input" File="Button.cs" Line="61">Parameter 'gameTime' of 'Button.Update(GameTime)' is never used. Remove the parameter or use it in the method body.</Issue>
             </Message>
            </Messages>
@@ -389,7 +389,7 @@
         </Type>
         <Type Name="SelectionBox" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
          <Messages>
-          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
            <Issue Certainty="75" Level="Warning">'SelectionBox' is an internal class that is apparently never instantiated. If so, remove the code from the assembly. If this class is intended to contain only static methods, consider adding a private constructor to prevent the compiler from generating a default constructor.</Issue>
           </Message>
          </Messages>
@@ -404,14 +404,14 @@
            <Accessors>
             <Accessor Name="#get_IsCurrentState()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
                <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base\GUI\StateManagement" File="State.cs" Line="25">'State.IsCurrentState.get()' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
             </Accessor>
             <Accessor Name="#set_IsCurrentState(System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
                <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base\GUI\StateManagement" File="State.cs" Line="26">'State.IsCurrentState.set(bool)' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
@@ -422,14 +422,14 @@
            <Accessors>
             <Accessor Name="#get_IsPopup()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
                <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base\GUI\StateManagement" File="State.cs" Line="19">'State.IsPopup.get()' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
             </Accessor>
             <Accessor Name="#set_IsPopup(System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
                <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base\GUI\StateManagement" File="State.cs" Line="20">'State.IsPopup.set(bool)' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
@@ -444,7 +444,7 @@
            <Accessors>
             <Accessor Name="#get_CurrentStateIndex()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
                <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base\GUI\StateManagement" File="StateManager.cs" Line="36">'StateManager.CurrentStateIndex.get()' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
@@ -455,7 +455,7 @@
            <Accessors>
             <Accessor Name="#get_PresentState()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
                <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base\GUI\StateManagement" File="StateManager.cs" Line="28">'StateManager.PresentState.get()' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
@@ -464,7 +464,7 @@
           </Member>
           <Member Name="#PushState(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base\GUI\StateManagement" File="StateManager.cs" Line="74">'StateManager.PushState(int)' appears to have no upstream public or protected callers.</Issue>
             </Message>
            </Messages>
@@ -479,28 +479,28 @@
          <Members>
           <Member Name="#.ctor(Microsoft.Xna.Framework.Content.ContentManager)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base\GUI\States" File="GamePlay.cs" Line="24">'GamePlay.GamePlay(ContentManager)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;GamePlay..ctor(ContentManager)&#xD;&#xA;State.LoadContent(ContentManager):Void</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#_unitMap" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="Member" TypeName="PreferJaggedArraysOverMultidimensional" Category="Microsoft.Performance" CheckId="CA1814" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="Breaking">
+            <Message Id="Member" TypeName="PreferJaggedArraysOverMultidimensional" Category="Microsoft.Performance" CheckId="CA1814" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="Breaking">
              <Issue Certainty="25" Level="Warning">'GamePlay._unitMap' is a multidimensional array. Replace it with a jagged array if possible.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Draw(Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.Graphics.GraphicsDevice,Microsoft.Xna.Framework.Graphics.SpriteBatch)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message Id="Microsoft.Xna.Framework.Graphics.SpriteBatch.DrawString(Microsoft.Xna.Framework.Graphics.SpriteFont,System.String,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="DependsOnFix">
+            <Message Id="Microsoft.Xna.Framework.Graphics.SpriteBatch.DrawString(Microsoft.Xna.Framework.Graphics.SpriteFont,System.String,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="DependsOnFix">
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base\GUI\States" File="GamePlay.cs" Line="220">Method 'GamePlay.Draw(GameTime, GraphicsDevice, SpriteBatch)' passes a literal string as parameter 'text' of a call to 'SpriteBatch.DrawString(SpriteFont, string, Vector2, Color)'. Retrieve the following string(s) from a resource table instead: "Roughness: ".</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#previousMouseState" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">It appears that field 'GamePlay.previousMouseState' is never used or is only ever assigned to. Use this field or remove it.</Issue>
             </Message>
            </Messages>
@@ -511,28 +511,28 @@
          <Members>
           <Member Name="#.ctor(Microsoft.Xna.Framework.Content.ContentManager)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\Nikita\Dropbox\Coding\C#\XNA\BoxGame\BoxGame\BoxGame\Classes\Base\GUI\States" File="MainMenu.cs" Line="24">'MainMenu.MainMenu(ContentManager)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;MainMenu..ctor(ContentManager)&#xD;&#xA;State.LoadContent(ContentManager):Void</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#currentMouseState" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">It appears that field 'MainMenu.currentMouseState' is never used or is only ever assigned to. Use this field or remove it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#previousKeyboardState" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">It appears that field 'MainMenu.previousKeyboardState' is never used or is only ever assigned to. Use this field or remove it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#previousMouseState" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2011-05-03 22:49:21Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2011-05-04 01:09:28Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">It appears that field 'MainMenu.previousMouseState' is never used or is only ever assigned to. Use this field or remove it.</Issue>
             </Message>
            </Messages>
